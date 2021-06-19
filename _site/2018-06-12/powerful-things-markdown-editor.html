@@ -37,8 +37,35 @@
 <link href="/tale/assets/css/main.css" rel="stylesheet">
 
 <script src="/tale/assets/js/jquery.min.js"></script>
+<script src="/tale/assets/js/alexpearce.js" charset="utf-8"></script>
 
+<!-- change your GA id in _config.yml -->
+<!— Global site tag (gtag.js) - Google Analytics —>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA—XXXXXXXX-X"></script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '395648901526529');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=395648901526529&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	
+<link rel="alternate" type="application/rss+xml" href="https://chesterhow.github.io/feed.xml" title="Tale Feed">
+	
+	
 </head>
+
 
 
 
@@ -59,7 +86,8 @@
 
     <!-- Begin Logo -->
     <a class="navbar-brand" href="/tale/">
-    <img src="/tale/" alt="">
+    <!--<img src="/tale/" alt="">-->
+        <div style="font-family: Righteous;font-size:larger"></div>
     </a>
     <!-- End Logo -->
 
@@ -76,29 +104,13 @@
                 
                 <li class="nav-item">
                 
-                <a class="nav-link" href="/tale/index.html">Blog</a>
+                </li>
                 </li>
 
+                
                 <li class="nav-item">
-                <a class="nav-link" href="/tale/about">About</a>
+                    <a class="nav-link" href="/tale/about">About</a>
                 </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
-                </li>
-
                 <script src="/tale/assets/js/lunr.js"></script>
 
 
@@ -138,12 +150,15 @@
 
 <!-- Site Title
 ================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle"></h1>
+
+
+    <div class="mainheading">
+    <!--<h1 class="sitetitle"></h1>-->
     <p class="lead">
         Minimal Jekyll theme for storytellers
     </p>
 </div>
+
 
 <!-- Content
 ================================================== -->
@@ -417,19 +432,19 @@ https://search.google.com/structured-data/testing-tool/u/0/
 </div>
 
 
-    
-</div>
+================================================== -->
+
 
 <!-- Categories Jumbotron
 ================================================== -->
-<div class="jumbotron fortags">
+<div class="jumbotron fortags" style="height: auto;">
 	<div class="d-md-flex h-100">
-		<div class="col-md-4 transpdark align-self-center text-center h-100">
+		<!--<div class="col-md-4 transpdark align-self-center text-center h-100">
             <div class="d-md-flex align-items-center justify-content-center h-100">
                 <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
             </div>
 		</div>
-		<div class="col-md-8 p-5 align-self-center text-center">
+	    <div class="col-md-8 p-5 align-self-center text-center">
             
             
                 
@@ -441,7 +456,19 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 
             
             
-		</div>
+		</div>-->
+        <div class="p-5 align-self-center text-center">
+            
+            
+            
+            
+            <a class="mt-1 mb-1" href="/tale/search/?tag=red">red (1)</a>
+            
+            <a class="mt-1 mb-1" href="/tale/search/?tag=yellow">yellow (1)</a>
+            
+            
+            
+        </div>
 	</div>
 </div>
 
@@ -464,9 +491,14 @@ https://search.google.com/structured-data/testing-tool/u/0/
 
 </div> <!-- /.site-content -->
 
+<div id="fb-root"></div> <!-- facebook plugin -->
+
+	
 <!-- Scripts
 ================================================== -->
 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0" nonce="GAbOAtlY"></script> 
+	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

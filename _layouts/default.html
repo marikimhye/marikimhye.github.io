@@ -17,22 +17,54 @@
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/alexpearce.js" charset="utf-8"></script>
 
+<!-- change your GA id in _config.yml -->
+<!— Global site tag (gtag.js) - Google Analytics —>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '395648901526529');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=395648901526529&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" title="{{ site.title }} Feed">
+	
+	
 </head>
 
 {% if jekyll.environment == 'production' %}
-<!-- change your GA id in _config.yml -->
+
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', '{{site.google_analytics}}', 'auto');
-ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.google_analytics}}');
+
+
+  document.oncontextmenu = new Function("return false"); //마우스 오른쪽 메뉴창 막기
+  document.ondragstart = new Function("return false"); //왼쪽 마우스로 이미지 드래그 막기
+  document.onselectstart = new Function("return false"); //왼쪽 마우스 문자 드래그 막기
+
 </script>
 {% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+
 <body class="{{layout}}">
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
@@ -49,7 +81,8 @@ ga('send', 'pageview');
 
     <!-- Begin Logo -->
     <a class="navbar-brand" href="{{ site.baseurl }}/">
-    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+    <!--<img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">-->
+        <div style="font-family: Righteous;font-size:larger">{{ site.name }}</div>
     </a>
     <!-- End Logo -->
 
@@ -68,29 +101,17 @@ ga('send', 'pageview');
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+                </li>
                 </li>
 
+                {% for menu in site.menu_list %}
+                <li class="nav-item">{{menu.key}}
+                    <a class="nav-link" href="{{ site.baseurl }}/{{menu}}">{{menu}}</a>
+                </li>
+                {% endfor %}
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
-                </li>
-
                 {% include search-lunr.html %}
 
             </ul>
@@ -110,12 +131,15 @@ ga('send', 'pageview');
 
 <!-- Site Title
 ================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
+{% assign description_length = site.description | size %}
+{% if site.description != null and description_length > 0 %}
+    <div class="mainheading">
+    <!--<h1 class="sitetitle">{{ site.name }}</h1>-->
     <p class="lead">
         {{ site.description }}
     </p>
 </div>
+{% endif %}
 
 <!-- Content
 ================================================== -->
@@ -125,7 +149,6 @@ ga('send', 'pageview');
 
 {% if site.mailchimp-list %}
 <!-- Bottom Alert Bar
-================================================== -->
 <div class="alertbar">
 	<div class="container text-center">
 		<span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
@@ -138,19 +161,19 @@ ga('send', 'pageview');
 	</div>
 </div>
 {% endif %}
-    
-</div>
+================================================== -->
+
 
 <!-- Categories Jumbotron
 ================================================== -->
-<div class="jumbotron fortags">
+<div class="jumbotron fortags" style="height: auto;">
 	<div class="d-md-flex h-100">
-		<div class="col-md-4 transpdark align-self-center text-center h-100">
+		<!--<div class="col-md-4 transpdark align-self-center text-center h-100">
             <div class="d-md-flex align-items-center justify-content-center h-100">
                 <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
             </div>
 		</div>
-		<div class="col-md-8 p-5 align-self-center text-center">
+	    <div class="col-md-8 p-5 align-self-center text-center">
             {% assign categories_list = site.categories %}
             {% if categories_list.first[0] == null %}
                 {% for category in categories_list %}
@@ -162,7 +185,17 @@ ga('send', 'pageview');
                 {% endfor %}
             {% endif %}
             {% assign categories_list = nil %}
-		</div>
+		</div>-->
+        <div class="p-5 align-self-center text-center">
+            {% assign tag_list = site.tags %}
+            {% assign tag_list_size = site.tags | size %}
+            {% if tag_list.first[0] != null %}
+            {% for tag in tag_list %}
+            <a class="mt-1 mb-1" href="{{site.baseurl}}/search/?tag={{ tag[0] | url_escape | strip | replace: ' ', '-' }}">{{ tag[0] | camelcase }} ({{ tag[1].size }})</a>
+            {% endfor %}
+            {% endif %}
+            {% assign tag_list = nil %}
+        </div>
 	</div>
 </div>
 
@@ -185,9 +218,14 @@ ga('send', 'pageview');
 
 </div> <!-- /.site-content -->
 
+<div id="fb-root"></div> <!-- facebook plugin -->
+
+	
 <!-- Scripts
 ================================================== -->
 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0" nonce="GAbOAtlY"></script> 
+	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
