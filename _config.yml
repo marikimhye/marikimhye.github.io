@@ -1,7 +1,7 @@
 # Site settings
 title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/marikimhye"
+baseurl:        ""
 url:            "https://marikimhye.github.io"
 
 # Google Analytics
