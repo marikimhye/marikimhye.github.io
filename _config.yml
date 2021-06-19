@@ -1,6 +1,6 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
+title:          Mari Note
+description:    ""
 baseurl:        ""
 url:            "https://marikimhye.github.io"
 
@@ -9,9 +9,8 @@ google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Mari Kim 
+  email:        marikimhye@gmail.com
 
 # Build settings
 markdown:       kramdown
