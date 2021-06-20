@@ -1,8 +1,49 @@
 ---
 layout: default
+disqus : false
+archive: false
+post_class: -templatepost
 ---
 
+<!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            {% include share.html %}
+        </div>
+
+        <!-- Post -->
+        {% assign author = site.authors[page.author] %}
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Post Categories -->
+                <div class="after-post-cats">
+                    <ul class="tags mb-4">
+                        {%if page.categories != null %}
+                        <i class="fas fa-fw fa-folder-open" aria-hidden="true"  style="font-size: large"></i>
+                        {% assign sortedCategories = page.categories | sort %}
+                        {% for category in sortedCategories %}
+                        <li>
+                            <a class="smoothscroll" href="{{site.baseurl}}/{{ category | replace: " ","-" }}">{{ category }}</a>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+                <!-- End Categories -->
+
+        
+
 <div class="post">
+
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-line"></div>
+
   <div class="post-info">
     <span>Written by</span>
     {% if page.author %}
@@ -16,9 +57,6 @@ layout: default
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
   </div>
-
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
 
   {{ content }}
 </div>
