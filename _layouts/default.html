@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{{ site.baseurl}}/assets/images/logo.png">
+
+    <title>{{page.title}} | {{site.name}} </title>
+
+    {% seo %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
+
+    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/alexpearce.js" charset="utf-8"></script>
+
+    <!-- change your GA id in _config.yml -->
+    <!— Global site tag (gtag.js) - Google Analytics —>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '395648901526529');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=395648901526529&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" title="{{ site.title }} Feed">
+
+
+</head>
+
   {% include head.html %}
 
   <body>
