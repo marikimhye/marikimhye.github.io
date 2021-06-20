@@ -5,9 +5,36 @@
     <description></description>
     <link>https://marikimhye.github.io/</link>
     <atom:link href="https://marikimhye.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Jun 2021 16:58:48 +0900</pubDate>
-    <lastBuildDate>Sun, 20 Jun 2021 16:58:48 +0900</lastBuildDate>
+    <pubDate>Sun, 20 Jun 2021 17:12:29 +0900</pubDate>
+    <lastBuildDate>Sun, 20 Jun 2021 17:12:29 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Jekyll로 블로그 만들기</title>
+        <description>&lt;hr /&gt;
+
+&lt;p&gt;layout: post
+title: “Let’s test spoilers”
+author: sal
+categories: [ Jekyll, tutorial ]
+image: assets/images/12.jpg
+featured: true
+hidden: true&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;지킬로 블로그 만들기.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Jun 2021 00:00:00 +0900</pubDate>
+        <link>https://marikimhye.github.io/Jekyll%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <guid isPermaLink="true">https://marikimhye.github.io/Jekyll%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        
+        <category>web</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
     
       <item>
         <title>Powerful things you can do with the Markdown editor</title>
@@ -356,29 +383,6 @@
         <pubDate>Fri, 12 Jan 2018 00:00:00 +0900</pubDate>
         <link>https://marikimhye.github.io/press-and-education/</link>
         <guid isPermaLink="true">https://marikimhye.github.io/press-and-education/</guid>
-        
-        
-        <category>Jekyll</category>
-        
-        <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>Options for creating a new site with Jekyll</title>
-        <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new &amp;lt;PATH&amp;gt;&lt;/code&gt; installs a new Jekyll site at the path specified (relative to current directory). In this case, Jekyll will be installed in a directory called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myblog&lt;/code&gt;. Here are some additional details:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;To install the Jekyll site into the directory you’re currently in, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; . If the existing directory isn’t empty, you can pass the –force option with jekyll new . –force.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; automatically initiates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install the dependencies required. (If you don’t want Bundler to install the gems, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new myblog --skip-bundle&lt;/code&gt;.)&lt;/li&gt;
-  &lt;li&gt;By default, the Jekyll site installed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; uses a gem-based theme called Minima. With gem-based themes, some of the directories and files are stored in the theme-gem, hidden from your immediate view.&lt;/li&gt;
-  &lt;li&gt;We recommend setting up Jekyll with a gem-based theme but if you want to start with a blank slate, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new myblog --blank&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;To learn about other parameters you can include with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;, type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new --help&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 12 Jan 2018 00:00:00 +0900</pubDate>
-        <link>https://marikimhye.github.io/options-for-creating-new-site-with-jekyll/</link>
-        <guid isPermaLink="true">https://marikimhye.github.io/options-for-creating-new-site-with-jekyll/</guid>
         
         
         <category>Jekyll</category>

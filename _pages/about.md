@@ -8,7 +8,7 @@ published: true
 
 <div class="row justify-content-between">
     <div class="col-md-8 pr-5" style="margin-top: 50px">
-        <p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+        <p>안녕하세요, 마리입니다.</p>
     </div>
     <div class="col-md-4 pr-5">
         <img style="padding:50px;margin-right: 13px;  border-radius: 50%;" src="/assets/images/marie_avator.jpg" alt="Marie">
