@@ -1,81 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+    {% include head.html %}
 
-    <link rel="icon" href="{{ site.baseurl}}/assets/images/logo.png">
+    <body>
 
-    <title>{{page.title}} | {{site.name}} </title>
+        {% include navigation.html %}
 
-    {% seo %}
+        <main>
+            {{ content }}
+        </main>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
+        {% include footer.html %}
 
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+    </body>
 
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/alexpearce.js" charset="utf-8"></script>
-
-    <!-- change your GA id in _config.yml -->
-    <!— Global site tag (gtag.js) - Google Analytics —>
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
-
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '395648901526529');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=395648901526529&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" title="{{ site.title }} Feed">
-
-
-</head>
-
-{% if jekyll.environment == 'production' %}
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '{{site.google_analytics}}');
-
-
-  document.oncontextmenu = new Function("return false"); //마우스 오른쪽 메뉴창 막기
-  document.ondragstart = new Function("return false"); //왼쪽 마우스로 이미지 드래그 막기
-  document.onselectstart = new Function("return false"); //왼쪽 마우스 문자 드래그 막기
-
-</script>
-{% endif %}
-
-{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-
-  {% include head.html %}
-
-  <body>
-
-    {% include navigation.html %}
-
-    <main>
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-  </body>
 </html>
