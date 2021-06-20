@@ -26,6 +26,64 @@
 
 </head>
 
+<body>
+
+    <!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <i class="fas fa-highlighter"></i>
+                <a href="">마리 노트</a>
+        </a>
+        <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                {% if page.url == "/" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/index.html">Posts</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{site.baseurl}}/tags" class="nav-link"> Tags </a>
+                </li>
+                
+
+                <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                </li>
+
+                {% include search-lunr.html %}
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+</body>
+
+
 {% if jekyll.environment == 'production' %}
 <!-- change your GA id in _config.yml -->
 <script>
