@@ -36,9 +36,11 @@
         </a>
     <!-- End Logo -->
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+    <!--Begin Button-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <!--End Buttion-->
 
     <div class="collapse navbar-collapse" id="navbarMediumish">
 
@@ -51,22 +53,17 @@
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Posts</a>
+                </li>
                 </li>
 
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
+                {% for menu in site.menu_list %}
+                <li class="nav-item">{{menu.key}}
+                    <a class="nav-link" href="{{ site.baseurl }}/{{menu}}">{{menu}}</a>
+                </li>
+                {% endfor %}
                 <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Tags</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
-
-
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
-                </li>
-
                 {% include search-lunr.html %}
 
             </ul>
