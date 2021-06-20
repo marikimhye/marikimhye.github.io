@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Pagination Post"
-author: "Chester"
-tags: Tale
+title: "Jekyll로 블로그 만들기"
+author: "Marie Kim"
+tags: blog
 ---
 
-Here we see **Tale's** pagination feature in action. It is set to 5 posts per page by default. Feel free to change this number in the `_config.yml` file!
+Introducing the blog page
