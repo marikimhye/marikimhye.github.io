@@ -42,40 +42,40 @@
         </a>
         <!-- End Logo -->
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fas fa-bars"></i>
-    </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarMediumish">
+        <div class="collapse navbar-collapse" id="navbarMediumish">
 
-        <!-- Begin Menu -->
+            <!-- Begin Menu -->
 
-            <ul class="navbar__menu">
+                <ul class="navbar-nav ml-auto">
 
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Posts</a>
-                </li>
+                    {% if page.url == "/" %}
+                    <li class="nav-item active">
+                    {% else %}
+                    <li class="nav-item">
+                    {% endif %}
+                    </li>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="{{site.baseurl}}/tags" class="nav-link"> Tags </a>
-                </li>
-                
+                    {% for menu in site.menu_list %}
+                    <li class="nav-item">{{menu.key}}
+                        <a class="nav-link" href="{{ site.baseurl }}/{{menu}}">{{menu}}</a>
+                    </li>
+                    {% endfor %}
 
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                    </li>
+                    {% include search-lunr.html %}
 
-                {% include search-lunr.html %}
+                </ul>
 
-            </ul>
+            <!-- End Menu -->
 
-        <!-- End Menu -->
-
-    </div>
+        </div>
 
     </div>
 </nav>
