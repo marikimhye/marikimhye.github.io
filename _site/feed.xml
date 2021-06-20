@@ -5,25 +5,13 @@
     <description></description>
     <link>https://marikimhye.github.io/</link>
     <atom:link href="https://marikimhye.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Jun 2021 17:12:29 +0900</pubDate>
-    <lastBuildDate>Sun, 20 Jun 2021 17:12:29 +0900</lastBuildDate>
+    <pubDate>Sun, 20 Jun 2021 17:14:01 +0900</pubDate>
+    <lastBuildDate>Sun, 20 Jun 2021 17:14:01 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Jekyll로 블로그 만들기</title>
-        <description>&lt;hr /&gt;
-
-&lt;p&gt;layout: post
-title: “Let’s test spoilers”
-author: sal
-categories: [ Jekyll, tutorial ]
-image: assets/images/12.jpg
-featured: true
-hidden: true&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;지킬로 블로그 만들기.&lt;/p&gt;
+        <description>&lt;p&gt;지킬로 블로그 만들기.&lt;/p&gt;
 </description>
         <pubDate>Sun, 20 Jun 2021 00:00:00 +0900</pubDate>
         <link>https://marikimhye.github.io/Jekyll%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
