@@ -2,8 +2,8 @@
 name: "마리 노트"
 title: "마리 노트"
 description: "PM Project, Post, Review"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: "assets/images/logo.png"
+favicon: "assets/images/logo.png"
 url: "https://marikimhye.github.io"
 baseurl: "/marikimhye.github.io"
 google_analytics: ""
@@ -11,17 +11,17 @@ disqus: ""
 mailchimp-list: ""
 include: ["_pages"]
 permalink: /blog/:title/
-menu_list: ['Posts','Tags','About']
+menu_list: ["Posts", "Tags", "About"]
 
 # Authors
 authors:
-  Marie
-    name: Marie Kim 
+  Marie:
+    name: Marie Kim
     display_name: Marie
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: marikimhye@gmail.com
     web: /about
-    
+
 # Plugins
 plugins:
   - jekyll-paginate
