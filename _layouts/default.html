@@ -74,7 +74,7 @@
 
     </div>
 </nav>
-<!-- End Navigation
+<!-- End Menu Navigation
 ================================================== -->
 
 <div class="site-content">
@@ -83,12 +83,15 @@
 
 <!-- Site Title
 ================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
+{% assign description_length = site.description | size %}
+{% if site.description != null and description_length > 0 %}
+    <div class="mainheading">
+    <!--<h1 class="sitetitle">{{ site.name }}</h1>-->
     <p class="lead">
         {{ site.description }}
     </p>
 </div>
+{% endif %}
 
 <!-- Content
 ================================================== -->
