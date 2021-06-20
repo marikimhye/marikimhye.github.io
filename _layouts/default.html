@@ -112,24 +112,53 @@ ga('send', 'pageview');
 
 <!-- Begin Menu Navigation
 ================================================== -->
-<nav class="navbar">
-    <div class="navbar__logo">
-        <i class="fas fa-highlighter"></i>
-        <a href="">마리 노트</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
+    <!--<img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">-->
+        <div style="font-family: Righteous;font-size:larger">{{ site.name }}</div>
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                {% if page.url == "/" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                </li>
+                </li>
+
+                {% for menu in site.menu_list %}
+                <li class="nav-item">{{menu.key}}
+                    <a class="nav-link" href="{{ site.baseurl }}/{{menu}}">{{menu}}</a>
+                </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                </li>
+                {% include search-lunr.html %}
+
+            </ul>
+
+        <!-- End Menu -->
+
     </div>
 
-    <ul class="navbar__menu">
-        <li><a href="">Home</a></li>
-        <li><a href="">Blogs</a></li>
-        <li><a href="">Posts</a></li>
-        <li><a href="">About</a></li>
-    </ul>
-
-    <a href="#" class="navbar__toogleBtn">
-        <i class="fas fa-bars"></i>
-    </a>
-
-            {% include search-lunr.html %}
+    </div>
+</nav>
 
 
 </nav>
